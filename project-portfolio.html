@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Refactored Project Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #d4ffaa66;
+      padding: 20px;
+    }
+
+    .header {
+      width: auto;
+      height: 63px;
+      background-color: white;
+      border: 1px solid #007f7f;
+      border-radius: 5px;
+      margin: 0 auto;
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 42px; /* DO NOT SCALE */
+      font-weight: bold;
+      color: #007f7f;
+      margin-top: 2px;
+      margin-bottom: 0px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #1e293b;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 40px;
+    }
+
+    .panel {
+      border: 1px solid;
+      border-radius: 16px;
+      padding: 25px;
+      background: linear-gradient(45deg, #3b82f619, #1d4ed819);
+      width: 600px;
+    }
+
+    .panel.minor {
+      background: linear-gradient(45deg, #10b98119, #05966919);
+      border-color: #10b981;
+    }
+
+    .panel.intern {
+      background: linear-gradient(45deg, #f59e0b19, #d9770619);
+      border-color: #f59e0b;
+    }
+
+    .panel .section-title {
+      color: #1e40af;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .panel.minor .section-title {
+      color: #065f46;
+    }
+
+    .panel.intern .section-title {
+      color: #92400e;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .project-title {
+      font-weight: bold;
+      font-size: 20px;
+      color: #1e293b;
+    }
+
+    .project-stack {
+      font-size: 16px;
+      color: #64748b;
+    }
+
+    .project-status {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .status-working {
+      color: #059669;
+    }
+
+    .status-near {
+      color: #dc2626;
+    }
+
+    .status-upcoming {
+      color: #f59e0b;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      background-color: #3b82f6;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      white-space: nowrap;
+      cursor: pointer;
+	  text-decoration: none;
+    }
+
+    .btn.minor {
+      background-color: #10b981;
+    }
+
+    .btn.intern {
+      background-color: #f59e0b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title">My Project Portfolio</div>
+  </div>
+
+  <div class="section-title" style="margin-top: 40px;">Personal Projects</div>
+
+  <div class="section-row">
+    <!-- Major Projects Panel -->
+    <div class="panel">
+      <div class="section-title">Major Projects</div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Python Desktop HRMS Application</div>
+          <div class="project-stack">Python, PyQt5, MySQL</div>
+          <div class="project-status status-working">Status: Working On</div>
+        </div>
+        <a class="btn" href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">
+		View Project</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Dynamic Data Entry Form Generator</div>
+          <div class="project-stack">Python, tkinter, customtkinter, MySQL</div>
+          <div class="project-status status-working">Status: Working On</div>
+        </div>
+        <div class="btn">View Project</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Real Life HRMS for SME Companies</div>
+          <div class="project-stack">Visual Basic 6.0, MS Access</div>
+          <div class="project-status status-near">Status: Near Deployment !!</div>
+        </div>
+        <div class="btn">View Project</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Complete Data Analysis with SQL</div>
+          <div class="project-stack">SQL, Python, Tableau/Power BI</div>
+          <div class="project-status status-upcoming">Status: Upcoming</div>
+        </div>
+        <div class="btn">View Project</div>
+      </div>
+    </div>
+
+    <!-- Minor Projects Panel -->
+    <div class="panel minor">
+      <div class="section-title">Minor Projects</div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Custom Trim Function in Excel</div>
+          <div class="project-stack">VBA</div>
+          <div class="project-status status-working">Status: Complete</div>
+        </div>
+        <div class="btn minor">View Project</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Python CLI CRUD Software</div>
+          <div class="project-stack">Python, MySQL</div>
+          <div class="project-status status-working">Status: Complete</div>
+        </div>
+        <div class="btn minor">View Project</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Internship Project</div>
+
+  <div class="section-row">
+    <div class="panel intern">
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-title">Raw Data Collection and Cleaning</div>
+          <div class="project-stack">Excel, Instant Data Scraper</div>
+          <div class="project-status status-working">Status: Complete</div>
+        </div>
+        <div class="btn intern">View Project</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
